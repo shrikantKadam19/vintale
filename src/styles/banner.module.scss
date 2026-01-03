@@ -1,0 +1,654 @@
+@import "@/styles/variables.scss";
+
+.commonSection {
+  margin-top: 130px;
+  overflow: hidden;
+
+  .mainSection {
+    position: relative;
+
+    [class*="button-wrap"] {
+      @media (max-width: 768px) {
+        margin-bottom: 230px;
+      }
+    }
+
+    h1 {
+      font-family: 'Montagu Slab', serif;
+      font-weight: 600;
+      font-size: 230px;
+      line-height: 190px;
+      text-align: center;
+      letter-spacing: -6px;
+
+      @media (max-width: 1100px) {
+        font-size: 180px;
+        line-height: 160px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 70px;
+        line-height: 68px;
+        letter-spacing: -1px;
+      }
+    }
+
+    .textWrap {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 70px;
+      z-index: 2;
+      position: relative;
+
+      @media (max-width: 1100px) {
+        margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: normal;
+        color: $text-grey;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+
+      .offer {
+        width: 175px;
+        height: 175px;
+        position: relative;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 1100px) {
+          margin-right: 0;
+        }
+
+        @media (max-width: 768px) {
+          width: 100px;
+          height: 100px;
+          margin-left: auto;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background-image: url("data:image/svg+xml,%3Csvg width='174' height='172' viewBox='0 0 174 172' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M86.6094 0L105.591 22.8542L133.915 13.8903L137.528 43.3788L166.202 51.1512L153.299 77.9115L173.219 99.9525L147.896 115.489L152.737 144.8L123.035 144.179L111.261 171.456L86.6094 154.875L61.9578 171.456L50.1837 144.179L20.4813 144.8L25.3229 115.489L0 99.9525L19.9202 77.9115L7.01658 51.1512L35.6908 43.3788L39.3033 13.8903L67.6276 22.8542L86.6094 0Z' fill='%23FECB3F'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          z-index: 0;
+        }
+
+        h3 {
+          font-size: 46px;
+          font-family: 'Montagu Slab', serif;
+          font-weight: 600;
+          text-align: center;
+          line-height: 35px;
+          position: absolute;
+          top: 53%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          @media (max-width: 768px) {
+            font-size: 25px;
+            line-height: 24px;
+          }
+
+          span {
+            font-size: 30px;
+            display: block;
+
+            @media (max-width: 768px) {
+              font-size: 20px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    .heroImage {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 11;
+    }
+
+    .productImage {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
+
+  .productDetail {
+    width: 100%;
+    background-image: url("/images/detail-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    position: relative;
+
+    .prodInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      padding: 200px 0 100px 0;
+
+      @media (max-width: 768px) {
+        padding: 60px 0 0 0;
+        flex-wrap: wrap;
+      }
+
+      .leftCol {
+        width: 30%;
+
+        @media (max-width: 1100px) {
+          width: 35%;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+
+      .rightCol {
+        width: 30%;
+
+        @media (max-width: 1100px) {
+          width: 35%;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        h2,
+        p {
+          text-align: right;
+
+          @media (max-width: 768px) {
+            text-align: left;
+          }
+        }
+
+        [class*="button-wrap"] {
+          margin-top: 40px;
+        }
+
+        [class*="shop-now"] {
+          margin-right: 0;
+        }
+      }
+
+      h2 {
+        font-family: 'Montagu Slab', serif;
+        font-weight: 600;
+        font-size: 48px;
+        color: $text-white;
+        margin-bottom: 20px;
+
+        @media (max-width: 1100px) {
+          font-size: 45px;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 30px;
+          margin-bottom: 5px;
+        }
+      }
+
+      p {
+        font-size: 22px;
+        color: $text-white;
+        font-weight: 500;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .features {
+    height: 650px;
+    background-image: url("/images/features-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -100px;
+
+    @media (max-width: 768px) {
+      height: 470px;
+      background-position: center -30px;
+      margin-top: -1px;
+    }
+
+    .prodImage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+
+      img {
+        position: absolute;
+        top: -400px;
+        left: 47%;
+        transform: translateX(-50%);
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    .prodMobImage {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .featuresList {
+
+    padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+      padding: 0 25px;
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+
+      li {
+
+        @media (max-width: 768px) {
+          margin-bottom: 20px;
+        }
+
+        &:nth-child(1) {
+          margin-top: -150px;
+
+          @media (max-width: 768px) {
+            margin-top: 0;
+          }
+        }
+
+        &:nth-child(2) {
+          margin-top: -40px;
+
+          @media (max-width: 768px) {
+            margin-top: 0;
+          }
+        }
+
+        &:nth-child(4) {
+          margin-top: -40px;
+
+          @media (max-width: 768px) {
+            margin-top: 0;
+          }
+        }
+
+        &:nth-child(5) {
+          margin-top: -150px;
+
+          @media (max-width: 768px) {
+            margin-top: 0;
+          }
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 150px;
+          height: 150px;
+          background-color: #FDE9EF;
+          border: 1px solid #EB235C;
+          border-radius: 50%;
+
+          @media (max-width: 768px) {
+            width: 130px;
+            height: 130px;
+          }
+        }
+
+        h3 {
+          font-family: 'Montagu Slab', serif;
+          font-weight: 600;
+          font-size: 20px;
+          color: $text-black;
+          line-height: 20px;
+          text-align: center;
+          margin-top: 10px;
+
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .vintaleVault {
+    padding: 80px 0;
+    position: relative;
+
+    @media (max-width: 768px) {
+      padding: 50px 0;
+    }
+
+    h2 {
+      font-family: 'Montagu Slab', serif;
+      font-weight: 600;
+      font-size: 56px;
+      text-align: center;
+      margin-bottom: 60px;
+
+      @media (max-width: 768px) {
+        font-size: 34px;
+        margin-bottom: 0;
+      }
+    }
+
+    .variantsWrap {
+      display: flex;
+      position: relative;
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+
+      .variant {
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        .imageWrap {
+          width: 247px;
+          height: 440px;
+
+          @media (max-width: 1100px) {
+            width: 195px;
+            height: 335px;
+          }
+
+          @media (max-width: 768px) {
+            width: 100%;
+            height: auto;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            transform: scale(1.1);
+            z-index: 2;
+            position: relative;
+
+            @media (max-width: 768px) {
+              width: 70%;
+              transform: none;
+              margin: 20px auto 0;
+            }
+          }
+
+          .mobImage {
+            display: none;
+
+            @media (max-width: 768px) {
+              display: block;
+            }
+          }
+        }
+
+        h3 {
+          font-family: 'Montagu Slab', serif;
+          font-weight: 600;
+          font-size: 30px;
+          text-align: center;
+          color: #EB235C;
+          margin-top: 10px;
+
+          @media (max-width: 768px) {
+            margin-top: 0;
+          }
+        }
+
+        h4 {
+          font-family: 'Montagu Slab', serif;
+          font-weight: 600;
+          font-size: 20px;
+          text-align: center;
+          color: #1C1826;
+        }
+      }
+    }
+
+    .note {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+
+      span {
+        background-color: #FDE9EF;
+        font-family: 'Montagu Slab', serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: #EB235C;
+        padding: 8px 16px;
+        border-radius: 120px;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .shopNowWrap {
+    padding: 50px 0 100px 0;
+    position: relative;
+
+    @media (max-width: 1100px) {
+      padding: 150px 0 300px 0;
+    }
+
+    @media (max-width: 768px) {
+      padding: 40px 0 0 0;
+    }
+
+    ul {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+
+      @media (max-width: 768px) {
+        gap: 20px;
+      }
+
+      li {
+        font-size: 18px;
+        font-weight: 600;
+        color: $text-grey;
+        transition: all 0.8s ease;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+
+        &:hover {
+          color: $text-black;
+        }
+      }
+    }
+
+    h2 {
+      font-family: 'Montagu Slab', serif;
+      font-weight: 600;
+      font-size: 195px;
+      color: $text-black;
+      line-height: 170px;
+      margin: 50px 0 40px 0;
+
+      @media (max-width: 1100px) {
+        font-size: 155px;
+        line-height: 140px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 65px;
+        line-height: 70px;
+        margin: 30px 0 30px 0;
+      }
+
+      span {
+        color: #EB235C;
+      }
+    }
+
+    .ctaWrap {
+      position: relative;
+      width: 70%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      .offer {
+        width: 175px;
+        height: 175px;
+        position: relative;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @media (max-width: 768px) {
+          width: 100px;
+          height: 100px;
+          margin-left: auto;
+          margin-right: 0;
+          right: 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background-image: url("data:image/svg+xml,%3Csvg width='174' height='172' viewBox='0 0 174 172' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M86.6094 0L105.591 22.8542L133.915 13.8903L137.528 43.3788L166.202 51.1512L153.299 77.9115L173.219 99.9525L147.896 115.489L152.737 144.8L123.035 144.179L111.261 171.456L86.6094 154.875L61.9578 171.456L50.1837 144.179L20.4813 144.8L25.3229 115.489L0 99.9525L19.9202 77.9115L7.01658 51.1512L35.6908 43.3788L39.3033 13.8903L67.6276 22.8542L86.6094 0Z' fill='%23FECB3F'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          z-index: 0;
+        }
+
+        h3 {
+          font-size: 46px;
+          font-family: 'Montagu Slab', serif;
+          font-weight: 600;
+          text-align: center;
+          line-height: 35px;
+          position: absolute;
+          top: 53%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          @media (max-width: 768px) {
+            font-size: 25px;
+            line-height: 24px;
+          }
+
+          span {
+            font-size: 30px;
+            display: block;
+
+            @media (max-width: 768px) {
+              font-size: 20px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    .prodMobImage {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+
+    .endProduct {
+      img {
+        position: absolute;
+        right: -60px;
+        bottom: -210px;
+        transform: scale(0.8);
+
+        &.forDesktop {
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+
+        &.forMobile {
+          display: none;
+          @media (max-width: 768px) {
+            display: block;
+            position: relative;
+            right: unset;
+            bottom: unset;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotateStar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.offer::before {
+  animation: rotateStar 10s linear infinite;
+}

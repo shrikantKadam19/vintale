@@ -1,0 +1,66 @@
+@import "@/styles/variables.scss";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transform: translateY(0);
+
+    img {
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+    }
+
+    .navLinksWrap {
+        gap: 40px;
+
+        a {
+            font-size: 18px;
+            font-weight: 600;
+            color: $text-grey;
+            transition: all 0.8s ease;
+            margin: 0;
+
+            &:hover {
+                color: $text-black;
+            }
+        }
+    }
+
+    .headerIcons {
+        display: flex;
+        gap: 18px;
+
+        a {
+            background-color: #E8E8E9;
+            display: flex;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            @media (max-width: 768px) {
+                width: 40px;
+                height: 40px;
+            }
+
+            img {
+                @media (max-width: 768px) {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    .hamburgerMenu {
+        height: calc(100vh - 88px);
+        justify-content: center;
+
+        a {
+            font-size: 25px;
+        }
+    }
+}
