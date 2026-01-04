@@ -31,14 +31,7 @@ export default function ProductImage() {
 
   return (
     <div className="product-wrap">
-      <Image
-        ref={bottleRef}
-        src="/images/rose-img.png"
-        alt="Bottle"
-        width={922}
-        height={1004}
-        className="product-image"
-      />
+      <Image ref={bottleRef} src="/images/rose-img.png" alt="Rose" width={922} height={1004} className="product-image" />
     </div>
   );
 }

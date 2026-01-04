@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "../common/header";
 import bannerStyle from "@/styles/banner.module.scss";
-
 import SectionOne from "./sectionOne";
 import SectionTwo from "./sectionTwo";
 import SectionThree from "./sectionThree";
